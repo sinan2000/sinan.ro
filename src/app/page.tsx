@@ -1,5 +1,5 @@
 import Image from "next/image"
-import { Phone, Mail, Download, Linkedin, Github } from "lucide-react"
+import { Download, Linkedin, Github } from "lucide-react"
 import { technologies } from "./data";
 import { SNSFooter } from "@/components/sns/footer";
 
@@ -27,13 +27,14 @@ export default function Home() {
           <div className="flex flex-col lg:flex-row items-center gap-12">
             <div className="lg:w-1/2">
               <Image
-                src="/myself.jpeg"
+                src="/me.jpg"
                 alt="Photo of me"
-                width={600}
-                height={600}
+                width={400}
+                height={400}
                 className="rounded-2xl shadow-xl w-64 lg:w-96 mx-auto"
                 priority={true}
                 loading="eager"
+                sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 33vw"
               />
             </div>
             <div className="lg:w-1/2 text-center lg:text-left">
@@ -128,20 +129,32 @@ export default function Home() {
           <h2 className="text-3xl font-bold mb-12 text-center">Get in Touch</h2>
           <div className="flex justify-center gap-8">
             <a href="mailto:denizceviker12@gmail.com" className="flex items-center gap-2 text-gray-600 hover:text-blue-600 transition-colors">
-              <Mail size={24} />
-              <span>Email</span>
+            <Image 
+              src="/gmail.svg" 
+              alt="Gmail" 
+              width={24}
+              height={24}
+              className="gmail-icon transition-all duration-300" 
+            />
+              <span className="sm:inline hidden">Email</span>
             </a>
             <a href="http://wa.me/40732405829" className="flex items-center gap-2 text-gray-600 hover:text-blue-600 transition-colors">
-              <Phone size={24} />
-              <span>Phone</span>
+            <Image 
+              src="/whatsapp.svg" 
+              alt="Whatsapp" 
+              width={24}
+              height={24}
+              className="gmail-icon transition-all duration-300" 
+            />
+              <span className="sm:inline hidden">Phone</span>
             </a>
             <a href="https://www.linkedin.com/in/sinan-ceviker" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-gray-600 hover:text-blue-600 transition-colors">
               <Linkedin size={24} />
-              <span>LinkedIn</span>
+              <span className="sm:inline hidden">LinkedIn</span>
             </a>
             <a href="https://github.com/sinan2000" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-gray-600 hover:text-blue-600 transition-colors">
               <Github size={24} />
-              <span>GitHub</span>
+              <span className="sm:inline hidden">GitHub</span>
             </a>
           </div>
         </div>

@@ -1,3 +1,4 @@
+fix logo hover color;
 extend the website for more content;
 ro&en;
 once sns automation is done, fetch projects and display
