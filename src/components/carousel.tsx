@@ -23,9 +23,8 @@ export default function CarouselComponent() {
                 alt={stack.title}
                 width={50}
                 height={50}
-                className={`mb-2 text-[${stack.color}]`}
+                className="mb-2"
                 aria-label={stack.title}
-                //style={{ color: stack.color }}
               />
               <span className="text-sm font-medium whitespace-nowrap">{stack.title}</span>
               <span className={`text-[11px] font-medium mt-1 px-2 py-0.5 rounded whitespace-nowrap ${cat.styles}`}>
