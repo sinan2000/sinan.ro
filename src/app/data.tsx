@@ -28,22 +28,26 @@ export const technologies = [
 export const contacts = [
   {
     name: "Gmail",
-    icon: <SiGmail size={24} className="text-red-500 group-hover:text-blue-600" />,
+    icon: <SiGmail size={24} className="text-red-500 group-hover:text-blue-600" aria-hidden="true" />,
     link: "mailto:denizceviker12@gmail.com",
+    label: "Send me an email",
   },
   {
     name: "WhatsApp",
-    icon: <FaWhatsapp size={24} className="text-green-500 group-hover:text-blue-600" />,
+    icon: <FaWhatsapp size={24} className="text-green-500 group-hover:text-blue-600" aria-hidden="true" />,
     link: "https://wa.me/40732405829",
+    label: "Chat with me on WhatsApp",
   },
   {
     name: "LinkedIn",
-    icon: <FaLinkedin size={24} className="text-blue-700 group-hover:text-blue-600" />,
+    icon: <FaLinkedin size={24} className="text-blue-700 group-hover:text-blue-600" aria-hidden="true" />,
     link: "https://www.linkedin.com/in/sinan-ceviker",
+    label: "Connect with me on LinkedIn",
   },
   {
     name: "GitHub",
-    icon: <FaGithub size={24} className="text-gray-800 group-hover:text-blue-600" />,
+    icon: <FaGithub size={24} className="text-gray-800 group-hover:text-blue-600" aria-hidden="true" />,
     link: "https://github.com/sinan2000",
+    label: "View my projects on GitHub",
   },
 ]

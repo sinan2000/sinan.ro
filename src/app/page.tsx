@@ -56,12 +56,19 @@ export default function Home() {
                   href="cv_Ceviker_Sinan_Deniz.pdf"
                   download
                   className="bg-blue-600 text-white px-6 py-3 rounded-lg flex items-center gap-2 hover:bg-blue-700 transition-colors"
+                  title="Download my CV"
+                  aria-label="Download my CV"
                 >
                   <Download size={20} />
                   Download CV
                 </a>
 
-                <a href="#contact" className="border border-gray-300 px-6 py-3 rounded-lg flex items-center gap-2 hover:border-blue-600 hover:text-blue-600 transition-colors">
+                <a
+                  href="#contact"
+                  className="border border-gray-300 px-6 py-3 rounded-lg flex items-center gap-2 hover:border-blue-600 hover:text-blue-600 transition-colors"
+                  title="Contact me"
+                  aria-label="Contact me"
+                >
                   Contact Me
                 </a>
               </div>
@@ -137,13 +144,15 @@ export default function Home() {
         <div className="container mx-auto px-6">
           <h2 className="text-3xl font-bold mb-12 text-center">Get in Touch</h2>
           <div className="flex justify-center gap-8">
-            {contacts.map(({ name, icon, link }) => (
+            {contacts.map(({ name, icon, link, label }) => (
               <a
                 key={name}
                 href={link}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 text-gray-600 hover:text-blue-600 transition-colors group"
+                title={label}
+                aria-label={label}
               >
                 {icon}
                 <span className="sm:inline hidden">{name}</span>
