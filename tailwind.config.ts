@@ -13,7 +13,7 @@ export default {
         foreground: "var(--foreground)",
       },
       fontFamily: {
-        inter: ['var(--font-inter']
+        inter: ['var(--font-inter)']
       }
     },
   },

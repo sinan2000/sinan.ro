@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { Logo } from './logo';
 import { ArrowUpRight } from 'lucide-react';
 
-export function SNSFooter() {
+export default function SNSFooter() {
     return (
         <div className="relative border-t border-emerald-500/20 bg-black/50 backdrop-blur-xl sns-footer">
             <div className="container mx-auto px-4 py-8">

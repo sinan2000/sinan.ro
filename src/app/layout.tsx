@@ -5,8 +5,8 @@ import { GoogleAnalytics } from '@next/third-parties/google'
 
 const inter = Inter({
   subsets: ["latin"],
+  weight: ["400", "700"],
   variable: "--font-inter",
-  display: "swap",
 })
 
 export const metadata: Metadata = {
