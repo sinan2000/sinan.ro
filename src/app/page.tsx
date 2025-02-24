@@ -1,8 +1,9 @@
 import Image from "next/image"
 import { Download, ArrowRight } from "lucide-react"
-import { contacts, technologies } from "./data";
+import { contacts, technologies, stacks, categories } from "./data";
 import mePhoto from "@/assets/me.jpg";
 import ClientFooter from "../components/clientfooter";
+import clsx from "clsx";
 
 export default function Home() {
   return (
@@ -112,6 +113,31 @@ export default function Home() {
                   <h3 className="text-xl font-semibold">{tech.name}</h3>
                 </div>
                 <p className="text-gray-600">{tech.description}</p>
+              </div>
+            ))}
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            {stacks.map(({ title, icon, category }) => (
+              <div key={title} className="p-4 border rounded-lg flex flex-col items-center">
+                <img src={icon} alt={title} className="w-12 h-12 mb-2" />
+                <p className="font-semibold">{title}</p>
+                <span
+                  className={clsx(
+                    "text-xs font-medium px-2 py-1 rounded-full",
+                    {
+                      "text-blue-600 bg-blue-100": category === "Infrastructure",
+                      "text-green-600 bg-green-100": category === "Web Development",
+                      "text-purple-600 bg-purple-100": category === "Mobile Development",
+                      "text-pink-600 bg-pink-100": category === "UI/Design",
+                      "text-yellow-600 bg-yellow-100": category === "Database",
+                      "text-red-600 bg-red-100": category === "Automation & DevOps",
+                      "text-cyan-600 bg-cyan-100": category === "Analytics & SEO",
+                    }
+                  )}
+                >
+                  {category}
+                </span>
               </div>
             ))}
           </div>
