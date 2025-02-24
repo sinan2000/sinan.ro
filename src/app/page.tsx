@@ -1,6 +1,6 @@
 import Image from "next/image"
 import { Download, ArrowRight } from "lucide-react"
-import { contacts, technologies, stacks, categories } from "./data";
+import { contacts, technologies } from "./data";
 import mePhoto from "@/assets/me.jpg";
 import ClientFooter from "../components/clientfooter";
 import dynamic from "next/dynamic";
