@@ -1,5 +1,6 @@
-import React from 'react';
-import { Code2, Cpu, Smartphone, Monitor as Desktop } from 'lucide-react';
+import { Code2, Cpu, Smartphone, Monitor } from 'lucide-react';
+import { FaGithub, FaLinkedin, FaWhatsapp } from "react-icons/fa";
+import { SiGmail } from 'react-icons/si';
 
 export const technologies = [
   {
@@ -19,7 +20,30 @@ export const technologies = [
   },
   {
     name: 'Desktop Apps',
-    icon: <Desktop size={24} className="text-blue-600" />,
+    icon: <Monitor size={24} className="text-blue-600" />,
     description: 'Developing high-performance desktop applications with Tauri and modern web technologies.'
   }
 ];
+
+export const contacts = [
+  {
+    name: "Gmail",
+    icon: <SiGmail size={24} className="text-red-500 group-hover:text-blue-600" />,
+    link: "mailto:denizceviker12@gmail.com",
+  },
+  {
+    name: "WhatsApp",
+    icon: <FaWhatsapp size={24} className="text-green-500 group-hover:text-blue-600" />,
+    link: "https://wa.me/40732405829",
+  },
+  {
+    name: "LinkedIn",
+    icon: <FaLinkedin size={24} className="text-blue-700 group-hover:text-blue-600" />,
+    link: "https://www.linkedin.com/in/sinan-ceviker",
+  },
+  {
+    name: "GitHub",
+    icon: <FaGithub size={24} className="text-gray-800 group-hover:text-blue-600" />,
+    link: "https://github.com/sinan2000",
+  },
+]

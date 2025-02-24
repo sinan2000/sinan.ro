@@ -19,11 +19,3 @@ body {
   background: var(--background);
   @apply text-gray-900;
 }
-
-.gmail-icon {
-  filter: brightness(0) saturate(100%);
-}
-
-.gmail-icon:hover {
-  filter: brightness(0) saturate(100%) invert(31%) sepia(100%) saturate(752%) hue-rotate(197deg) brightness(95%) contrast(90%);
-}
