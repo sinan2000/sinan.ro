@@ -39,6 +39,7 @@ export default function Home() {
                   priority
                   loading="eager"
                   placeholder="blur"
+                  quality={60}
                   sizes="(max-width: 640px) 256px, 384px"
                 />
               </div>

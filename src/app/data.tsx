@@ -84,12 +84,12 @@ export const stacks = [
 ];
 
 export const categories = [
-  { key: "infrastructure", name: "Infrastructure", styles: "bg-blue-100 text-blue-600" },
-  { key: "web", name: "Web Dev", styles: "bg-emerald-100 text-emerald-600" },
-  { key: "mobile", name: "Mobile Dev", styles: "bg-indigo-100 text-indigo-600" },
-  { key: "design", name: "UI/Design", styles: "bg-fuchsia-100 text-fuchsia-600" },
-  { key: "database", name: "Database", styles: "bg-amber-100 text-amber-600" },
-  { key: "automation", name: "Automation & DevOps", styles: "bg-orange-100 text-orange-600" },
-  { key: "analytics", name: "Analytics & SEO", styles: "bg-teal-100 text-teal-600" },
-  { key: "desktop", name: "Desktop Dev", styles: "bg-gray-100 text-gray-600" },
+  { key: "infrastructure", name: "Infrastructure", styles: "bg-blue-100 text-blue-800" },
+  { key: "web", name: "Web Dev", styles: "bg-emerald-100 text-emerald-800" },
+  { key: "mobile", name: "Mobile Dev", styles: "bg-indigo-100 text-indigo-800" },
+  { key: "design", name: "UI/Design", styles: "bg-fuchsia-100 text-fuchsia-800" },
+  { key: "database", name: "Database", styles: "bg-amber-100 text-amber-800" },
+  { key: "automation", name: "Automation & DevOps", styles: "bg-orange-100 text-orange-800" },
+  { key: "analytics", name: "Analytics & SEO", styles: "bg-teal-100 text-teal-800" },
+  { key: "desktop", name: "Desktop Dev", styles: "bg-gray-100 text-gray-800" },
 ];
