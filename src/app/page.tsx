@@ -3,7 +3,9 @@ import { Download, ArrowRight } from "lucide-react"
 import { contacts, technologies, stacks, categories } from "./data";
 import mePhoto from "@/assets/me.jpg";
 import ClientFooter from "../components/clientfooter";
-import clsx from "clsx";
+import dynamic from "next/dynamic";
+
+const InfiniteCarousel = dynamic(() => import('@/components/carousel'))
 
 export default function Home() {
   return (
@@ -105,7 +107,7 @@ export default function Home() {
       <section id="skills" className="py-16">
         <div className="container mx-auto px-6">
           <h2 className="text-3xl font-bold mb-12 text-center">Technologies & Skills</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
             {technologies.map((tech) => (
               <div key={tech.name} className="p-6 rounded-xl border border-gray-200 hover:border-blue-500 transition-colors">
                 <div className="flex items-center gap-4 mb-4">
@@ -117,30 +119,7 @@ export default function Home() {
             ))}
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-            {stacks.map(({ title, icon, category }) => (
-              <div key={title} className="p-4 border rounded-lg flex flex-col items-center">
-                <img src={icon} alt={title} className="w-12 h-12 mb-2" />
-                <p className="font-semibold">{title}</p>
-                <span
-                  className={clsx(
-                    "text-xs font-medium px-2 py-1 rounded-full",
-                    {
-                      "text-blue-600 bg-blue-100": category === "Infrastructure",
-                      "text-green-600 bg-green-100": category === "Web Development",
-                      "text-purple-600 bg-purple-100": category === "Mobile Development",
-                      "text-pink-600 bg-pink-100": category === "UI/Design",
-                      "text-yellow-600 bg-yellow-100": category === "Database",
-                      "text-red-600 bg-red-100": category === "Automation & DevOps",
-                      "text-cyan-600 bg-cyan-100": category === "Analytics & SEO",
-                    }
-                  )}
-                >
-                  {category}
-                </span>
-              </div>
-            ))}
-          </div>
+          <InfiniteCarousel />
         </div>
       </section>
 

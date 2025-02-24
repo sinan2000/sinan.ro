@@ -14,7 +14,17 @@ export default {
       },
       fontFamily: {
         inter: ['var(--font-inter)']
-      }
+      },
+      keyframes: {
+        scroll: {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(-50%)' },
+        },
+      },
+      animation: {
+        scroll: 'scroll 30s linear infinite',
+        pause: 'paused',
+      },
     },
   },
   plugins: [],

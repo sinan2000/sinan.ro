@@ -19,3 +19,7 @@ body {
   background: var(--background);
   @apply text-gray-900;
 }
+
+.group:hover .animate-scroll {
+  animation-play-state: paused;
+}
