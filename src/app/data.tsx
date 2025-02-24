@@ -2,6 +2,8 @@ import { Code2, Cpu, Smartphone, Monitor } from 'lucide-react';
 import { FaGithub, FaLinkedin, FaWhatsapp } from "react-icons/fa";
 import { SiGmail } from 'react-icons/si';
 
+
+
 export const technologies = [
   {
     name: 'Web Development',
@@ -53,34 +55,34 @@ export const contacts = [
 ]
 
 export const stacks = [
-  { title: "CMake", icon: "/icons/cmake.svg", category: "automation" },
-  { title: "DigitalOcean", icon: "/icons/digitalocean.svg", category: "infrastructure" },
-  { title: "Django", icon: "/icons/django.svg", category: "web" },
-  { title: "Docker", icon: "/icons/docker.svg", category: "automation" },
-  { title: "Expo", icon: "/icons/expo.svg", category: "mobile" },
-  { title: "Figma", icon: "/icons/figma.svg", category: "design" },
-  { title: "Firebase", icon: "/icons/firebase.svg", category: "database" },
-  { title: "Google Ads", icon: "/icons/googleads.svg", category: "analytics" },
-  { title: "Google Analytics", icon: "/icons/googleanalytics.svg", category: "analytics" },
-  { title: "Google Search Console", icon: "/icons/googlesearchconsole.svg", category: "analytics" },
-  { title: "Google Sheets", icon: "/icons/googlesheets.svg", category: "automation" },
-  { title: "Google Tag Manager", icon: "/icons/googletagmanager.svg", category: "analytics" },
-  { title: "Next.js", icon: "/icons/nextdotjs.svg", category: "web" },
-  { title: "Nginx", icon: "/icons/nginx.svg", category: "infrastructure" },
-  { title: "Payload CMS", icon: "/icons/payloadcms.svg", category: "web" },
-  { title: "PostgreSQL", icon: "/icons/postgresql.svg", category: "database" },
-  { title: "Prisma", icon: "/icons/prisma.svg", category: "database" },
-  { title: "Python", icon: "/icons/python.svg", category: "web" },
-  { title: "React", icon: "/icons/react.svg", category: "web" },
-  { title: "Redis", icon: "/icons/redis.svg", category: "database" },
-  { title: "Sanity CMS", icon: "/icons/sanity.svg", category: "web" },
-  { title: "Strapi", icon: "/icons/strapi.svg", category: "web" },
-  { title: "Stripe", icon: "/icons/stripe.svg", category: "web" },
-  { title: "Tailwind CSS", icon: "/icons/tailwindcss.svg", category: "design" },
-  { title: "Tauri", icon: "/icons/tauri.svg", category: "desktop" },
-  { title: "TypeScript", icon: "/icons/typescript.svg", category: "web" },
-  { title: "WordPress", icon: "/icons/wordpress.svg", category: "web" },
-  { title: "Vercel", icon: "/icons/vercel.svg", category: "infrastructure" }
+  { title: "CMake", icon: "/icons/cmake.svg", category: "automation", color: "#064F8C" }, // Blue
+  { title: "DigitalOcean", icon: "/icons/digitalocean.svg", category: "infrastructure", color: "#0080FF" }, // Blue
+  { title: "Django", icon: "/icons/django.svg", category: "web", color: "#092E20" }, // Green
+  { title: "Docker", icon: "/icons/docker.svg", category: "automation", color: "#2496ED" }, // Blue
+  { title: "Expo", icon: "/icons/expo.svg", category: "mobile", color: "#000020" }, // Dark
+  { title: "Figma", icon: "/icons/figma.svg", category: "design", color: "#F24E1E" }, // Orange
+  { title: "Firebase", icon: "/icons/firebase.svg", category: "database", color: "#FFCA28" }, // Yellow
+  { title: "Google Ads", icon: "/icons/googleads.svg", category: "analytics", color: "#4285F4" }, // Blue
+  { title: "Google Analytics", icon: "/icons/googleanalytics.svg", category: "analytics", color: "#E37400" }, // Orange
+  { title: "Google Search Console", icon: "/icons/googlesearchconsole.svg", category: "analytics", color: "#1A73E8" }, // Blue
+  { title: "Google Sheets", icon: "/icons/googlesheets.svg", category: "automation", color: "#0F9D58" }, // Green
+  { title: "Google Tag Manager", icon: "/icons/googletagmanager.svg", category: "analytics", color: "#4285F4" }, // Blue
+  { title: "Next.js", icon: "/icons/nextdotjs.svg", category: "web", color: "#000000" }, // Black
+  { title: "Nginx", icon: "/icons/nginx.svg", category: "infrastructure", color: "#009639" }, // Green
+  { title: "Payload CMS", icon: "/icons/payloadcms.svg", category: "web", color: "#121212" }, // Dark Gray
+  { title: "PostgreSQL", icon: "/icons/postgresql.svg", category: "database", color: "#336791" }, // Blue
+  { title: "Prisma", icon: "/icons/prisma.svg", category: "database", color: "#2D3748" }, // Dark Gray
+  { title: "Python", icon: "/icons/python.svg", category: "web", color: "#3776AB" }, // Blue
+  { title: "React", icon: "/icons/react.svg", category: "web", color: "#61DAFB" }, // Cyan
+  { title: "Redis", icon: "/icons/redis.svg", category: "database", color: "#DC382D" }, // Red
+  { title: "Sanity CMS", icon: "/icons/sanity.svg", category: "web", color: "#F03E2F" }, // Red
+  { title: "Strapi", icon: "/icons/strapi.svg", category: "web", color: "#8A3FFC" }, // Purple
+  { title: "Stripe", icon: "/icons/stripe.svg", category: "web", color: "#635BFF" }, // Blue
+  { title: "Tailwind CSS", icon: "/icons/tailwindcss.svg", category: "design", color: "#38BDF8" }, // Cyan
+  { title: "Tauri", icon: "/icons/tauri.svg", category: "desktop", color: "#24C8DB" }, // Blue
+  { title: "TypeScript", icon: "/icons/typescript.svg", category: "web", color: "#3178C6" }, // Blue
+  { title: "WordPress", icon: "/icons/wordpress.svg", category: "web", color: "#21759B" }, // Blue
+  { title: "Vercel", icon: "/icons/vercel.svg", category: "infrastructure", color: "#000000" }, // Black
 ];
 
 export const categories = [

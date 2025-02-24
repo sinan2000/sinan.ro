@@ -7,17 +7,6 @@ const categoryMap = categories.reduce((acc, cat) => {
   return acc;
 }, {} as Record<string, { key: string; name: string; styles: string }>);
 
-const categoryStyles = {
-  infrastructure: 'bg-blue-100 text-blue-600',
-  web: 'bg-emerald-100 text-emerald-600',
-  mobile: 'bg-indigo-100 text-indigo-600',
-  design: 'bg-fuchsia-100 text-fuchsia-600',
-  database: 'bg-amber-100 text-amber-600',
-  automation: 'bg-orange-100 text-orange-600',
-  analytics: 'bg-teal-100 text-teal-600',
-  desktop: 'bg-gray-100 text-gray-600',
-};
-
 export default function CarouselComponent() {
   return (
     <div className="overflow-hidden group">
@@ -34,8 +23,9 @@ export default function CarouselComponent() {
                 alt={stack.title}
                 width={50}
                 height={50}
-                className="mb-2"
+                className={`mb-2 text-[${stack.color}]`}
                 aria-label={stack.title}
+                //style={{ color: stack.color }}
               />
               <span className="text-sm font-medium whitespace-nowrap">{stack.title}</span>
               <span className={`text-[11px] font-medium mt-1 px-2 py-0.5 rounded whitespace-nowrap ${cat.styles}`}>
