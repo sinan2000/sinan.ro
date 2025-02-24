@@ -12,7 +12,7 @@ export default function Home() {
         <nav className="container mx-auto px-6 py-4">
           <div className="flex justify-between items-center">
             <span className="text-xl font-semibold">Sinan</span>
-            <div className="space-x-6">
+            <div className="hidden min-[200px]:flex space-x-6">
               <a href="#about" className="hover:text-blue-600 transition-colors">About</a>
               <a href="#skills" className="hover:text-blue-600 transition-colors">Skills</a>
               <a href="#work" className="hover:text-blue-600 transition-colors">Work</a>
@@ -27,15 +27,18 @@ export default function Home() {
         <div className="container mx-auto px-6">
           <div className="flex flex-col lg:flex-row items-center gap-12">
             <div className="lg:w-1/2">
-              <Image
-                src={mePhoto}
-                alt="Sinan Deniz Ceviker's Photo"
-                className="rounded-2xl shadow-xl w-64 lg:w-96 mx-auto"
-                priority
-                loading="eager"
-                placeholder="blur"
-                sizes="(max-width: 640px) 256px, 384px"
-              />
+              <div className="aspect-[3/4] relative w-64 lg:w-96 mx-auto">
+                <Image
+                  src={mePhoto}
+                  alt="Sinan Deniz Ceviker's Photo"
+                  className="rounded-2xl shadow-xl"
+                  fill
+                  priority
+                  loading="eager"
+                  placeholder="blur"
+                  sizes="(max-width: 640px) 256px, 384px"
+                />
+              </div>
             </div>
             <div className="lg:w-1/2 text-center lg:text-left">
               <h1 className="text-4xl lg:text-5xl font-bold mb-4">
