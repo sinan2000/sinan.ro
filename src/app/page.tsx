@@ -1,8 +1,8 @@
 import Image from "next/image"
 import { Download, Linkedin, Github } from "lucide-react"
 import { technologies } from "./data";
-import mePhoto from "@/me.jpg";
-import ClientFooter from "./clientfooter";
+import mePhoto from "@/assets/me.jpg";
+import ClientFooter from "../components/clientfooter";
 
 export default function Home() {
   return (
