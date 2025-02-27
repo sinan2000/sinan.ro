@@ -59,6 +59,7 @@ export const stacks = [
   { title: "Docker", icon: "/icons/docker.svg", category: "automation" },
   { title: "Expo", icon: "/icons/expo.svg", category: "mobile" },
   { title: "Figma", icon: "/icons/figma.svg", category: "design" },
+  { title: "Rust", icon: "/icons/rust.svg", category: "systems" },
   { title: "Firebase", icon: "/icons/firebase.svg", category: "database" },
   { title: "Google Ads", icon: "/icons/googleads.svg", category: "analytics" },
   { title: "Google Analytics", icon: "/icons/googleanalytics.svg", category: "analytics" },
@@ -92,4 +93,5 @@ export const categories = [
   { key: "automation", name: "Automation & DevOps", styles: "bg-orange-100 text-orange-800" },
   { key: "analytics", name: "Analytics & SEO", styles: "bg-teal-100 text-teal-800" },
   { key: "desktop", name: "Desktop Dev", styles: "bg-gray-100 text-gray-800" },
+  { key: "systems", name: "Systems Programming", styles: "bg-red-100 text-red-800" }
 ];
