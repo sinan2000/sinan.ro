@@ -1,3 +1,4 @@
-extend the website for more content;
-ro&en;
-once sns automation is done, fetch projects and display
+- add footer iframe and delete the component
+- ro&en: ro default, /en for english;
+- fetch projects from sns automation and display in a new page;
+- create blog pages from sns automation and display here;
