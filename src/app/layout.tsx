@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import Script from "next/script";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import { websiteJsonLd } from "@/schemas";
 
 const inter = Inter({
@@ -77,25 +77,13 @@ export default function RootLayout({
       <body
         className={`${inter.variable} ${inter.className} antialiased`}
       >
+        <GoogleAnalytics gaId="G-075R6P76VN" />
+
         <script
           id="website-json-ld"
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
         />
-
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-075R6P76VN"
-          strategy="lazyOnload"
-        />
-
-        <Script async strategy="afterInteractive" id="google-analytics">
-          {`
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', 'G-075R6P76VN');
-          `}
-        </Script>
 
         {children}
       </body>
