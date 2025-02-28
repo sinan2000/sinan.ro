@@ -4,12 +4,20 @@ import { contacts, technologies } from "./data";
 import mePhoto from "@/assets/me.jpg";
 import ClientFooter from "../components/clientfooter";
 import dynamic from "next/dynamic";
+import Script from "next/script";
+import { personJsonLd } from "@/schemas";
 
 const InfiniteCarousel = dynamic(() => import('@/components/carousel'))
 
 export default function Home() {
   return (
     <div className="min-h-screen bg-white">
+      <Script
+        id="about-me"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
+      />
+
       {/* Sticky Header */}
       <header className="fixed top-0 w-full bg-white/80 backdrop-blur-sm z-50 border-b border-gray-100">
         <nav className="container mx-auto px-6 py-4">

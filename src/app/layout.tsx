@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Script from "next/script";
+import { websiteJsonLd } from "@/schemas";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -62,6 +63,11 @@ export default function RootLayout({
       >
         {children}
       </body>
+      <Script
+        id="website-json-ld"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
+      />
 
       <Script
         src="https://www.googletagmanager.com/gtag/js?id=G-075R6P76VN"
