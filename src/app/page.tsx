@@ -3,10 +3,9 @@ import { Download, ArrowRight } from "lucide-react"
 import { contacts, technologies } from "./data";
 import mePhoto from "@/assets/me.jpg";
 import ClientFooter from "../components/clientfooter";
-import dynamic from "next/dynamic";
 import { navLinksJsonLd, personJsonLd } from "@/schemas";
+import CarouselComponent from "@/components/carousel";
 
-const InfiniteCarousel = dynamic(() => import('@/components/carousel'))
 
 export default function Home() {
   return (
@@ -20,7 +19,6 @@ export default function Home() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(navLinksJsonLd) }}
       />
-
 
       {/* Sticky Header */}
       <header className="fixed top-0 w-full bg-white/80 backdrop-blur-sm z-50 border-b border-gray-100">
@@ -132,7 +130,7 @@ export default function Home() {
             ))}
           </div>
 
-          <InfiniteCarousel />
+          <CarouselComponent />
         </div>
       </section>
 
