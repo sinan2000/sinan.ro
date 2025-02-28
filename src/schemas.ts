@@ -1,4 +1,4 @@
-import { WithContext, Person, WebSite } from 'schema-dts'
+import { WithContext, Person, WebSite, SiteNavigationElement } from 'schema-dts'
 
 export const personJsonLd: WithContext<Person> = {
   "@context": "https://schema.org",
@@ -81,4 +81,33 @@ export const websiteJsonLd: WithContext<WebSite> = {
     "name": "Sinan Deniz Ceviker",
     "url": "https://www.sinan.ro"
   }
+}
+
+export const navLinksJsonLd: WithContext<SiteNavigationElement> = {
+  "@context": "https://schema.org",
+  "@type": "SiteNavigationElement",
+  "name": "Main Navigation",
+  "url": "https://www.sinan.ro",
+  "hasPart": [
+    {
+      "@type": "WebPageElement",
+      "name": "About",
+      "url": "https://www.sinan.ro#about"
+    },
+    {
+      "@type": "WebPageElement",
+      "name": "Skills",
+      "url": "https://www.sinan.ro#skills"
+    },
+    {
+      "@type": "WebPageElement",
+      "name": "Work",
+      "url": "https://www.sinan.ro#work"
+    },
+    {
+      "@type": "WebPageElement",
+      "name": "Contact",
+      "url": "https://www.sinan.ro#contact"
+    }
+  ]
 }

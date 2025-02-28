@@ -11,6 +11,37 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://www.sinan.ro"),
+  openGraph: {
+    title: "Sinan Deniz Ceviker - Software Developer & AI Engineer",
+    description: "I specialize in React, Next.js, Python, and automation solutions. As the founder of SNS Automation, I help businesses by building high-performance apps.",
+    url: "https://www.sinan.ro",
+    siteName: "Sinan Deniz Ceviker - Software Developer & AI Engineer",
+    images: [
+      {
+        url: "https://www.sinan.ro/me-og.jpg",
+        width: 1199,
+        height: 630,
+        alt: "Sinan Deniz Ceviker - Software Developer & AI Engineer",
+      }
+    ],
+    type: "website",
+    locale: 'en_US',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    "max-image-preview": "large",
+    "max-snippet": -1,
+    "max-video-preview": -1,
+    googleBot: "index, follow"
+  },
+  applicationName: 'Sinan Deniz Ceviker - Software Developer & AI Engineer',
+  appleWebApp: {
+    title: "Sinan Deniz Ceviker - Software Developer & AI Engineer",
+    statusBarStyle: "default",
+    capable: true
+  },
   title: "Sinan Deniz Ceviker - Software Developer & AI Engineer",
   description: "I specialize in React, Next.js, Python, and automation solutions. As the founder of SNS Automation, I help businesses by building high-performance apps.",
   keywords: [
@@ -34,21 +65,6 @@ export const metadata: Metadata = {
   authors: [{ name: "Sinan Deniz Ceviker", url: "https://www.sinan.ro" }],
   creator: "Sinan Deniz Ceviker",
   publisher: "Sinan Deniz Ceviker",
-  openGraph: {
-    title: "Sinan Deniz Ceviker - Software Developer & AI Engineer",
-    description: "I specialize in React, Next.js, Python, and automation solutions. As the founder of SNS Automation, I help businesses by building high-performance apps.",
-    url: "https://www.sinan.ro",
-    siteName: "Sinan Deniz Ceviker - Software Developer & AI Engineer",
-    images: [
-      {
-        url: "https://www.sinan.ro/me-og.jpg",
-        width: 1199,
-        height: 630,
-        alt: "Sinan Deniz Ceviker - Software Developer & AI Engineer",
-      }
-    ],
-    type: "website",
-  }
 };
 
 export default function RootLayout({
@@ -61,28 +77,28 @@ export default function RootLayout({
       <body
         className={`${inter.variable} ${inter.className} antialiased`}
       >
-        {children}
-      </body>
-      <Script
-        id="website-json-ld"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
-      />
+        <Script
+          id="website-json-ld"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
+        />
 
-      <Script
-        src="https://www.googletagmanager.com/gtag/js?id=G-075R6P76VN"
-        strategy="lazyOnload"
-      />
-      <Script strategy="lazyOnload" id="google-analytics">
-        {`
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-075R6P76VN"
+          strategy="lazyOnload"
+        />
+
+        <Script async strategy="afterInteractive" id="google-analytics">
+          {`
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
-
           gtag('config', 'G-075R6P76VN');
-        `}
-      </Script>
+          `}
+        </Script>
 
+        {children}
+      </body>
     </html>
   );
 }
