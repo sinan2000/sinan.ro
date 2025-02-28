@@ -77,7 +77,7 @@ export default function RootLayout({
       <body
         className={`${inter.variable} ${inter.className} antialiased`}
       >
-        <Script
+        <script
           id="website-json-ld"
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}

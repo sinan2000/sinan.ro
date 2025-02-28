@@ -4,7 +4,6 @@ import { contacts, technologies } from "./data";
 import mePhoto from "@/assets/me.jpg";
 import ClientFooter from "../components/clientfooter";
 import dynamic from "next/dynamic";
-import Script from "next/script";
 import { navLinksJsonLd, personJsonLd } from "@/schemas";
 
 const InfiniteCarousel = dynamic(() => import('@/components/carousel'))
@@ -12,14 +11,12 @@ const InfiniteCarousel = dynamic(() => import('@/components/carousel'))
 export default function Home() {
   return (
     <div className="min-h-screen bg-white">
-      <Script
-        id="about-me-json-ld"
+      <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
       />
 
-      <Script
-        id="nav-links-json-ld"
+      <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(navLinksJsonLd) }}
       />
