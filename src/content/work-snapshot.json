@@ -1,0 +1,111 @@
+[
+  {
+    "slug": "coup",
+    "title": {
+      "en": "coup",
+      "ro": "coup"
+    },
+    "summary": {
+      "en": "A new currency for students: a marketplace where nothing costs real money.",
+      "ro": "O monedă nouă pentru studenți: un marketplace unde nimic nu costă bani reali."
+    },
+    "stack": [
+      "Expo",
+      "React Native",
+      "Next.js",
+      "Supabase",
+      "PostgreSQL"
+    ],
+    "image": {
+      "src": "https://www.snsautomation.tech/cms-api/media/file/explore-1.webp",
+      "width": 800,
+      "height": 1731,
+      "frame": "phone"
+    }
+  },
+  {
+    "slug": "genesa",
+    "title": {
+      "en": "Genesa",
+      "ro": "Genesa"
+    },
+    "summary": {
+      "en": "A restaurant and guesthouse whose website runs the daily routine: menu photos, Facebook posts, order alerts and bookings.",
+      "ro": "Un restaurant cu pensiune al cărui site face singur rutina zilnică: poze cu meniul, postări pe Facebook, alerte pentru comenzi și rezervări."
+    },
+    "stack": [
+      "Next.js",
+      "Payload CMS",
+      "OpenAI",
+      "Stripe",
+      "Pusher",
+      "Vonage SMS"
+    ],
+    "image": {
+      "src": "https://www.snsautomation.tech/cms-api/media/file/desktop-1.jpg",
+      "width": 1440,
+      "height": 900,
+      "frame": "browser"
+    }
+  },
+  {
+    "slug": "hmi-bluetooth-remote",
+    "title": {
+      "en": "Machinery HMI remote control",
+      "ro": "Telecomandă HMI pentru utilaje"
+    },
+    "summary": {
+      "en": "A phone app that runs an industrial PVC-processing machine over Bluetooth, sold together with the machine.",
+      "ro": "O aplicație de telefon care comandă un utilaj industrial de prelucrare PVC prin Bluetooth, vândută împreună cu utilajul."
+    },
+    "stack": [
+      "Expo",
+      "TypeScript",
+      "Bluetooth LE",
+      "Bluetooth Classic"
+    ],
+    "image": null
+  },
+  {
+    "slug": "plastmach-group",
+    "title": {
+      "en": "Plastmach, Vorne, Windowland",
+      "ro": "Plastmach, Vorne, Windowland"
+    },
+    "summary": {
+      "en": "One client, three storefronts: machinery, hardware and window accessories, each with its own domain and audience.",
+      "ro": "Un client, trei magazine: utilaje, feronerie și accesorii pentru ferestre, fiecare cu propriul domeniu și public."
+    },
+    "stack": [
+      "Next.js",
+      "Payload CMS",
+      "Tailwind",
+      "next-intl"
+    ],
+    "image": {
+      "src": "https://www.snsautomation.tech/cms-api/media/file/plastmach-1.jpg",
+      "width": 1440,
+      "height": 900,
+      "frame": "browser"
+    }
+  },
+  {
+    "slug": "ai-cup-2026",
+    "title": {
+      "en": "AI Cup 2026",
+      "ro": "AI Cup 2026"
+    },
+    "summary": {
+      "en": "2nd of 89 teams in the Netherlands: bird species identification from radar data, for conservation around wind farms.",
+      "ro": "Locul 2 din 89 de echipe în Olanda: identificarea speciilor de păsări din date radar, pentru conservare în jurul parcurilor eoliene."
+    },
+    "stack": [
+      "Python",
+      "TabPFN",
+      "LightGBM",
+      "CatBoost",
+      "XGBoost"
+    ],
+    "image": null
+  }
+]

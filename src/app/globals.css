@@ -1,38 +1,119 @@
 @import "tailwindcss";
-@tailwind utilities;
 
+/* A controller's position: slate radar glass, crisp rings, track green, amber for what is locked. */
 @theme {
-  --animate-scroll: scroll 30s linear infinite;
+  --color-glass: #1b2026;
+  --color-panel: #222931;
+  --color-panel-2: #2a323b;
+  --color-rack: #14181d;
+  --color-rule: #36404a;
+  --color-ring: #4a5663;
+  --color-ink: #e8edf2;
+  --color-ink-2: #a3afbb;
+  --color-ink-3: #8592a0;
+  --color-track: #5ad1a8;
+  --color-amber: #f2c14e;
+  --color-amber-ink: #1d1708;
 
-  @keyframes scroll {
-    0% {
-      transform: translateX(0%);
-    }
+  /* Paper flight strips, banded by kind. */
+  --color-strip-role: #cfe0ef;
+  --color-strip-project: #cfe8d6;
+  --color-strip-competition: #f4cfbf;
+  --color-strip-education: #eee2a4;
+  --color-strip-ink: #12161a;
+  --color-strip-ink-2: #3a434c;
 
-    100% {
-      transform: translateX(-50%);
-    }
+  --font-sans: var(--font-atkinson), ui-sans-serif, system-ui, sans-serif;
+  --font-data: var(--font-b612), ui-monospace, monospace;
+
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@layer base {
+  html {
+    background: var(--color-glass);
+    color: var(--color-ink);
+    color-scheme: dark;
+    scrollbar-color: var(--color-ring) var(--color-rack);
+    -webkit-text-size-adjust: 100%;
+  }
+  body {
+    font-family: var(--font-sans);
+    text-rendering: optimizeLegibility;
+  }
+  ::selection {
+    background: var(--color-amber);
+    color: var(--color-amber-ink);
+  }
+  :focus-visible {
+    outline: 2px solid var(--color-amber);
+    outline-offset: 3px;
+  }
+  a {
+    text-underline-offset: 0.2em;
+    text-decoration-thickness: 1px;
+  }
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
+  }
+  p {
+    text-wrap: pretty;
   }
 }
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@layer components {
+  .skip-link {
+    position: absolute;
+    left: 16px;
+    top: -60px;
+    z-index: 50;
+    padding: 10px 14px;
+    background: var(--color-amber);
+    color: var(--color-amber-ink);
+    font-weight: 700;
+  }
+  .skip-link:focus {
+    top: 12px;
+  }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  /* Data set in the cockpit display face: callsigns, times, periods, bearings. ASCII only. */
+  .data {
+    font-family: var(--font-data);
+    font-variant-numeric: tabular-nums;
+    letter-spacing: 0.02em;
+  }
+
+  /* The sweep: a trailing wedge and a leading edge, rotated from JS so the blips stay in step. */
+  .sweep {
+    position: absolute;
+    inset: 0;
+    border-radius: 9999px;
+    background: conic-gradient(from 0deg, transparent 0deg 300deg, rgb(90 209 168 / 0.05) 330deg, rgb(90 209 168 / 0.2) 360deg);
+    will-change: transform;
+    pointer-events: none;
+  }
+  .sweep::after {
+    content: "";
+    position: absolute;
+    left: calc(50% - 0.75px);
+    top: 0;
+    width: 1.5px;
+    height: 50%;
+    background: linear-gradient(to top, rgb(90 209 168 / 0.15), rgb(90 209 168 / 0.85));
+  }
+
+  /* Rack rails behind the strips. */
+  .rack {
+    --rail: 12px;
+    background-color: var(--color-rack);
+    background-image: repeating-linear-gradient(to bottom, transparent 0 calc(var(--rail) - 1px), rgb(255 255 255 / 0.05) calc(var(--rail) - 1px) var(--rail));
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  @apply text-gray-900;
-}
-
-.group:hover .animate-scroll {
-  animation-play-state: paused;
+@media (prefers-reduced-motion: reduce) {
+  .sweep {
+    display: none;
+  }
 }
