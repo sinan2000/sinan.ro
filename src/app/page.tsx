@@ -2,7 +2,7 @@ import Image from "next/image"
 import { Download, ArrowRight } from "lucide-react"
 import { contacts, technologies } from "./data";
 import mePhoto from "@/assets/me.jpg";
-import ClientFooter from "../components/clientfooter";
+import { SnsCredit } from "@/components/sns/sns-credit";
 import { navLinksJsonLd, personJsonLd } from "@/schemas";
 import CarouselComponent from "@/components/carousel";
 
@@ -183,9 +183,10 @@ export default function Home() {
         <div className="container mx-auto px-6 text-center text-gray-500">
           © {new Date().getFullYear()} SNS Automation. All rights reserved.
         </div>
+        <div className="mt-2 flex justify-center text-gray-500">
+          <SnsCredit lang="en" site="sinan-ro" />
+        </div>
       </footer>
-
-      <ClientFooter />
     </div>
   );
 }
