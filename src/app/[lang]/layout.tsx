@@ -8,7 +8,8 @@ import { person, tracks } from '@/content/profile';
 import { isLocale, locales } from '@/i18n/config';
 import { localizePath } from '@/i18n/routing';
 
-const atkinson = Atkinson_Hyperlegible_Next({ subsets: ['latin', 'latin-ext'], variable: '--font-atkinson', display: 'swap' });
+// Next has no metrics to build an adjusted fallback for this family yet, so the plain system stack stands in.
+const atkinson = Atkinson_Hyperlegible_Next({ subsets: ['latin', 'latin-ext'], variable: '--font-atkinson', display: 'swap', adjustFontFallback: false, fallback: ['ui-sans-serif', 'system-ui', 'sans-serif'] });
 const b612 = B612_Mono({ subsets: ['latin'], weight: ['400', '700'], variable: '--font-b612', display: 'swap' });
 
 type Params = Promise<{ lang: string }>;

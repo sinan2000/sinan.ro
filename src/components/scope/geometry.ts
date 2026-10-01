@@ -9,10 +9,13 @@ export function rangeOf(year: number): number {
   return Math.min(1, Math.max(0.2, Math.sqrt((NOW - year) / SPAN)));
 }
 
+/** Server and browser trig can differ in the last digits; rounding keeps hydration identical. */
+const round = (n: number) => Math.round(n * 1000) / 1000;
+
 /** Position in percent of the square for a bearing (degrees from north, clockwise) and a range. */
 export function polar(bearing: number, range: number): { x: number; y: number } {
   const a = (bearing * Math.PI) / 180;
-  return { x: 50 + 100 * RADIUS * range * Math.sin(a), y: 50 - 100 * RADIUS * range * Math.cos(a) };
+  return { x: round(50 + 100 * RADIUS * range * Math.sin(a)), y: round(50 - 100 * RADIUS * range * Math.cos(a)) };
 }
 
 /** Range rings at the turn of each year still on the scope. */
