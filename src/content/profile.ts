@@ -44,9 +44,9 @@ export const tracks: Track[] = [
     kind: 'project',
     start: 2026.3,
     active: true,
-    bearing: 42,
+    bearing: 52,
     tag: '26-NOW',
-    role: { en: 'Co-founder, built the product', ro: 'Co-fondator, am construit produsul' },
+    role: { en: 'Co-founder & CTO', ro: 'Co-fondator și CTO' },
     org: { en: 'coup', ro: 'coup' },
     period: { en: '2026 to now', ro: '2026 până acum' },
     result: {
@@ -182,13 +182,74 @@ export const tracks: Track[] = [
     },
     links: [],
   },
+  {
+    callsign: 'TA',
+    kind: 'role',
+    start: 2026.25,
+    active: true,
+    bearing: 355,
+    tag: '0426-NOW',
+    role: { en: 'Teaching assistant', ro: 'Asistent de predare' },
+    org: { en: 'University of Groningen', ro: 'Universitatea din Groningen' },
+    period: { en: 'Apr 2026 to now', ro: 'apr. 2026 până acum' },
+    result: {
+      en: 'Mentor student teams building an autonomous-driving robot end to end: lane following, traffic-sign recognition and behaviour planning.',
+      ro: 'Îndrum echipe de studenți care construiesc de la zero un robot cu conducere autonomă: urmărirea benzii, recunoașterea indicatoarelor și planificarea comportamentului.',
+    },
+    details: {
+      en: 'Debugging across the robotics stack: real-time image processing, PID control and lidar-based perception.',
+      ro: 'Depanare pe tot stack-ul robotic: procesare de imagine în timp real, control PID și percepție cu lidar.',
+    },
+    links: [],
+  },
+  {
+    callsign: 'HELLA',
+    kind: 'role',
+    start: 2023.37,
+    active: false,
+    bearing: 285,
+    tag: '0523-0823',
+    role: { en: 'Software development engineer', ro: 'Inginer dezvoltare software' },
+    org: { en: 'HELLA, Timișoara', ro: 'HELLA, Timișoara' },
+    period: { en: 'May to Aug 2023', ro: 'mai–aug. 2023' },
+    result: {
+      en: 'Developed and validated automotive software components.',
+      ro: 'Am dezvoltat și validat componente software pentru industria auto.',
+    },
+    details: {
+      en: 'Rhapsody, DOORS and PTC Integrity for design and requirements; Vector CANoe and DaVinci Developer Classic; component testing and validation with WinIdea.',
+      ro: 'Rhapsody, DOORS și PTC Integrity pentru design și cerințe; Vector CANoe și DaVinci Developer Classic; testarea și validarea componentelor cu WinIdea.',
+    },
+    links: [],
+  },
+  {
+    callsign: 'CONTI',
+    kind: 'role',
+    start: 2022.85,
+    active: false,
+    bearing: 250,
+    tag: '1122-0523',
+    role: { en: 'Software integration developer', ro: 'Developer integrare software' },
+    org: { en: 'Continental, Timișoara', ro: 'Continental, Timișoara' },
+    period: { en: 'Nov 2022 to May 2023', ro: 'nov. 2022–mai 2023' },
+    result: {
+      en: 'Integrated automotive software stacks on QNX with custom build systems.',
+      ro: 'Am integrat stack-uri software auto pe QNX, cu sisteme de build proprii.',
+    },
+    details: {
+      en: 'Automated build, test and integration workflows with Jenkins and CMake, in Agile teams.',
+      ro: 'Am automatizat fluxurile de build, testare și integrare cu Jenkins și CMake, în echipe Agile.',
+    },
+    links: [],
+  },
 ];
 
 export const capabilities: { code: string; area: L; tools: string }[] = [
   { code: 'ML', area: { en: 'Machine learning', ro: 'Machine learning' }, tools: 'Python, pandas, scikit-learn, LightGBM, XGBoost, CatBoost, TabPFN, PyTorch, Ultralytics YOLO, OpenCV, SHAP, Optuna' },
   { code: 'BE', area: { en: 'Backends and data', ro: 'Backend și date' }, tools: 'Python, Pydantic, httpx, TypeScript, Node.js, Hono, PostgreSQL, Supabase, Drizzle, REST and OpenAPI, Docker, CI' },
   { code: 'WEB', area: { en: 'Web', ro: 'Web' }, tools: 'Next.js, React, Payload CMS, Sanity, Tailwind CSS, Playwright, Vitest' },
-  { code: 'MOB', area: { en: 'Mobile and devices', ro: 'Mobil și dispozitive' }, tools: 'Expo, React Native, Bluetooth LE and Classic, PLC protocols, Tauri' },
+  { code: 'MOB', area: { en: 'Mobile and desktop', ro: 'Mobil și desktop' }, tools: 'Expo, React Native, Tauri' },
+  { code: 'EMB', area: { en: 'Embedded and automotive', ro: 'Embedded și auto' }, tools: 'Bluetooth LE and Classic, PLC protocols, QNX, CMake, Jenkins, Vector CANoe, DaVinci Developer' },
 ];
 
 export const personal = {

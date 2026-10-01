@@ -16,8 +16,8 @@ const en = {
     email: 'Email me',
   },
   scope: {
-    label: 'Radar of roles, projects and results since 2023',
-    caption: 'Every role, project and result since 2023. The nearer the centre, the more recent. Select a track to read it.',
+    label: 'Radar of roles, projects and results since 2022',
+    caption: 'Every role, project and result since 2022. The nearer the centre, the more recent. Select a track to read it.',
     states: { sweep: 'Sweep', hold: 'Hold', locked: 'Locked' },
     tracks: 'tracks',
     hold: 'Hold sweep',
@@ -73,8 +73,8 @@ const ro: Copy = {
     email: 'Scrie-mi',
   },
   scope: {
-    label: 'Radar cu roluri, proiecte și rezultate din 2023',
-    caption: 'Fiecare rol, proiect și rezultat din 2023 încoace. Cu cât mai aproape de centru, cu atât mai recent. Alege o urmă ca s-o citești.',
+    label: 'Radar cu roluri, proiecte și rezultate din 2022',
+    caption: 'Fiecare rol, proiect și rezultat din 2022 încoace. Cu cât mai aproape de centru, cu atât mai recent. Alege o urmă ca s-o citești.',
     states: { sweep: 'Baleiaj', hold: 'Oprit', locked: 'Fixat' },
     tracks: 'urme',
     hold: 'Oprește baleiajul',

@@ -130,7 +130,7 @@ export function TrackingDisplay({ tracks, lang, copy, kinds, initial }: Props) {
             );
           })}
           {RINGS.map((r) => {
-            const p = polar(225, r.range);
+            const p = polar(215, r.range);
             return (
               <span key={r.year} aria-hidden="true" className="data pointer-events-none absolute -translate-x-full -translate-y-full pr-1 text-[10px] text-ink-3 sm:text-[11px]" style={{ left: `${p.x}%`, top: `${p.y}%` }}>
                 {r.year}

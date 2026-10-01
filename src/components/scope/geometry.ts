@@ -1,6 +1,6 @@
-/** The scope's clock: the present sits at the centre, the rim is just before September 2023. */
+/** The scope's clock: the present sits at the centre, the rim is October 2022. */
 export const NOW = 2026.75;
-const SPAN = 3.25;
+const SPAN = 4;
 /** Scope radius as a share of the square, leaving the rim for bearing labels. */
 export const RADIUS = 0.44;
 
@@ -19,7 +19,7 @@ export function polar(bearing: number, range: number): { x: number; y: number } 
 }
 
 /** Range rings at the turn of each year still on the scope. */
-export const RINGS = [2026, 2025, 2024].map((year) => ({ year, range: rangeOf(year) }));
+export const RINGS = [2026, 2025, 2024, 2023].map((year) => ({ year, range: rangeOf(year) }));
 
 /** Brightness of a blip the sweep passed `behind` degrees ago: full on contact, decaying to a dim hold. */
 export function afterglow(behind: number): number {
