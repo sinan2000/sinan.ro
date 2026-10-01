@@ -1,4 +1,5 @@
 import { ArrowUpRight, Download } from 'lucide-react';
+import Image from 'next/image';
 import type { Copy } from '@/content/copy';
 import { capabilities, person, personal } from '@/content/profile';
 import type { Locale } from '@/i18n/config';
@@ -78,6 +79,7 @@ export function Contact({ copy }: { copy: Copy['contact'] }) {
     <section id="contact" aria-labelledby="contact-title" className="border-t border-rule">
       <div className="mx-auto grid max-w-[1360px] gap-12 px-4 py-20 sm:px-6 md:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] md:py-28">
         <div>
+          <Image src="/sinan-aicup.jpg" alt={copy.photoAlt} width={520} height={650} sizes="13rem" className="mb-8 aspect-[4/5] w-40 border border-rule object-cover md:w-52" />
           <h2 id="contact-title" className="text-5xl font-extrabold tracking-[-0.03em] md:text-7xl">{copy.title}</h2>
           <p className="mt-5 max-w-[44ch] text-lg text-ink-2">{copy.body}</p>
           <a href={person.cv} download className="mt-8 inline-flex min-h-12 items-center gap-2 bg-amber px-5 font-bold text-amber-ink transition-colors hover:bg-[#f7d27a]">

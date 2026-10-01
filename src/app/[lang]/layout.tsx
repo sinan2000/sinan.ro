@@ -36,7 +36,7 @@ export async function generateMetadata({ params }: { params: Params }): Promise<
       title: copy.meta.title,
       description: copy.meta.description,
       locale: lang === 'ro' ? 'ro_RO' : 'en_GB',
-      images: [{ url: '/me-og.jpg', width: 1199, height: 630, alt: person.name }],
+      images: [{ url: '/og-aicup.jpg', width: 1200, height: 630, alt: copy.contact.photoAlt }],
     },
     twitter: { card: 'summary_large_image', title: copy.meta.title, description: copy.meta.description },
   };
@@ -48,7 +48,7 @@ function personJsonLd(lang: 'en' | 'ro') {
     '@type': 'Person',
     name: person.name,
     url: person.url,
-    image: `${person.url}/me-jsonld.jpg`,
+    image: `${person.url}/sinan-aicup.jpg`,
     jobTitle: lang === 'ro' ? 'Inginer AI și software' : 'AI & Software Engineer',
     email: `mailto:${person.email}`,
     address: { '@type': 'PostalAddress', addressLocality: 'Groningen', addressCountry: 'NL' },
