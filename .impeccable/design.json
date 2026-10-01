@@ -1,0 +1,154 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-01T00:00:00Z",
+  "title": "Design System: Sinan-Deniz Çeviker",
+  "extensions": {
+    "colorMeta": {
+      "amber": { "role": "primary", "displayName": "Lock Amber", "canonical": "#f2c14e", "tonalRamp": ["oklch(25% 0.06 85)", "oklch(36% 0.09 85)", "oklch(48% 0.12 85)", "oklch(60% 0.14 85)", "oklch(72% 0.15 85)", "oklch(83% 0.14 85)", "oklch(89% 0.10 85)", "oklch(95% 0.05 85)"] },
+      "amber-hover": { "role": "primary", "displayName": "Pale Amber", "canonical": "#f7d27a" },
+      "amber-ink": { "role": "primary", "displayName": "Amber Ink", "canonical": "#1d1708" },
+      "track": { "role": "secondary", "displayName": "Track Green", "canonical": "#5ad1a8", "tonalRamp": ["oklch(22% 0.05 165)", "oklch(33% 0.07 165)", "oklch(45% 0.10 165)", "oklch(57% 0.12 165)", "oklch(68% 0.13 165)", "oklch(78% 0.12 165)", "oklch(87% 0.08 165)", "oklch(95% 0.04 165)"] },
+      "strip-role": { "role": "tertiary", "displayName": "Role Paper", "canonical": "#cfe0ef" },
+      "strip-project": { "role": "tertiary", "displayName": "Project Paper", "canonical": "#cfe8d6" },
+      "strip-competition": { "role": "tertiary", "displayName": "Competition Paper", "canonical": "#f4cfbf" },
+      "strip-education": { "role": "tertiary", "displayName": "Education Paper", "canonical": "#eee2a4" },
+      "strip-ink": { "role": "tertiary", "displayName": "Strip Ink", "canonical": "#12161a" },
+      "strip-ink-2": { "role": "tertiary", "displayName": "Strip Ink Soft", "canonical": "#3a434c" },
+      "glass": { "role": "neutral", "displayName": "Slate Glass", "canonical": "#1b2026", "tonalRamp": ["#14181d", "#161b20", "#1b2026", "#222931", "#2a323b", "#36404a", "#4a5663", "#8592a0"] },
+      "glass-deep": { "role": "neutral", "displayName": "Deep Glass", "canonical": "#161b20" },
+      "panel": { "role": "neutral", "displayName": "Console Panel", "canonical": "#222931" },
+      "panel-2": { "role": "neutral", "displayName": "Raised Panel", "canonical": "#2a323b" },
+      "rack": { "role": "neutral", "displayName": "Rack", "canonical": "#14181d" },
+      "rule": { "role": "neutral", "displayName": "Rule", "canonical": "#36404a" },
+      "ring": { "role": "neutral", "displayName": "Ring", "canonical": "#4a5663" },
+      "ink": { "role": "neutral", "displayName": "Ink", "canonical": "#e8edf2", "tonalRamp": ["#36404a", "#4a5663", "#6b7886", "#8592a0", "#a3afbb", "#c4cdd6", "#e8edf2", "#f6f8fa"] },
+      "ink-2": { "role": "neutral", "displayName": "Ink Soft", "canonical": "#a3afbb" },
+      "ink-3": { "role": "neutral", "displayName": "Ink Faint", "canonical": "#8592a0" }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "The name in the hero only." },
+      "headline": { "displayName": "Headline", "purpose": "Section titles." },
+      "title": { "displayName": "Title", "purpose": "Work item titles and the hero role line." },
+      "body": { "displayName": "Body", "purpose": "Ledes and running text, capped at 44 to 60ch." },
+      "body-sm": { "displayName": "Body Small", "purpose": "Strip details, readout fields, organisation lines." },
+      "label": { "displayName": "Label", "purpose": "Readout header, rack group titles, instrument links." },
+      "data": { "displayName": "Data", "purpose": "B612 Mono for ASCII data only: callsigns, bearings, times, periods, codes. Never localised words." },
+      "data-callsign": { "displayName": "Data Callsign", "purpose": "The locked callsign in the readout and on strips." }
+    },
+    "shadows": [
+      { "name": "rack-drop", "value": "0 6px 14px -8px rgb(0 0 0 / 0.7)", "purpose": "Strips and capability rows sitting on a rack section only." }
+    ],
+    "motion": [
+      { "name": "ease-out-expo", "value": "cubic-bezier(0.16, 1, 0.3, 1)", "purpose": "Target box lock-in (300ms) and work image hover (500 to 700ms)." },
+      { "name": "sweep-period", "value": "6000ms linear rotation", "purpose": "Radar sweep; blips brighten as it passes and decay. Hidden under prefers-reduced-motion, with every track lit." },
+      { "name": "focus-ring", "value": "outline: 2px solid var(--color-amber); outline-offset: 3px", "purpose": "Site-wide :focus-visible." }
+    ],
+    "breakpoints": [
+      { "name": "sm", "value": "640px" },
+      { "name": "md", "value": "768px" },
+      { "name": "lg", "value": "1024px" },
+      { "name": "short-viewport", "value": "max-height: 820px (at lg)" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button (Download CV)",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "The one wanted action. Amber, square, bold, with a mono PDF meta.",
+      "html": "<a class=\"ds-btn-primary\" href=\"#\"><svg viewBox=\"0 0 24 24\" width=\"16\" height=\"16\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M12 15V3\"/><path d=\"M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4\"/><path d=\"m7 10 5 5 5-5\"/></svg>Download CV <span class=\"ds-meta\">PDF</span></a>",
+      "css": ".ds-btn-primary { display: inline-flex; align-items: center; gap: 8px; min-height: 48px; padding: 0 20px; background: var(--color-amber, #f2c14e); color: var(--color-amber-ink, #1d1708); font-family: var(--font-sans, 'Atkinson Hyperlegible Next', sans-serif); font-weight: 700; text-decoration: none; border-radius: 0; transition: background-color 150ms; } .ds-btn-primary .ds-meta { font-family: var(--font-data, 'B612 Mono', monospace); font-size: 12px; font-weight: 400; opacity: 0.7; } .ds-btn-primary:hover { background: #f7d27a; } .ds-btn-primary:focus-visible { outline: 2px solid var(--color-amber, #f2c14e); outline-offset: 3px; }"
+    },
+    {
+      "name": "Outline Button",
+      "kind": "button",
+      "refersTo": "button-outline",
+      "description": "Secondary action beside the CV, such as Email me.",
+      "html": "<a class=\"ds-btn-outline\" href=\"#\"><svg viewBox=\"0 0 24 24\" width=\"16\" height=\"16\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><rect x=\"2\" y=\"4\" width=\"20\" height=\"16\" rx=\"2\"/><path d=\"m22 7-10 6L2 7\"/></svg>Email me</a>",
+      "css": ".ds-btn-outline { display: inline-flex; align-items: center; gap: 8px; min-height: 48px; padding: 0 20px; background: transparent; color: var(--color-ink, #e8edf2); border: 1px solid var(--color-ring, #4a5663); font-family: var(--font-sans, 'Atkinson Hyperlegible Next', sans-serif); font-weight: 700; text-decoration: none; border-radius: 0; transition: border-color 150ms; } .ds-btn-outline:hover { border-color: var(--color-ink, #e8edf2); } .ds-btn-outline:focus-visible { outline: 2px solid var(--color-amber, #f2c14e); outline-offset: 3px; }"
+    },
+    {
+      "name": "Status Strip",
+      "kind": "nav",
+      "refersTo": "status-strip",
+      "description": "The workstation's top bar: mono name mark, station and local time, language switch, compact CV.",
+      "html": "<header class=\"ds-status\"><a class=\"ds-status-mark\" href=\"#\">S-D ÇEVIKER</a><p class=\"ds-status-station\"><span class=\"ds-status-code\">EHGG</span> Groningen <span class=\"ds-status-time\">13:37</span> <span class=\"ds-faint\">local time</span></p><nav class=\"ds-status-nav\"><a href=\"#\" aria-current=\"page\">EN</a><a href=\"#\">RO</a><a class=\"ds-status-cv\" href=\"#\">CV</a></nav></header>",
+      "css": ".ds-status { display: flex; align-items: center; justify-content: space-between; gap: 16px; height: 56px; padding: 0 24px; background: var(--color-rack, #14181d); border-bottom: 1px solid var(--color-rule, #36404a); font-family: var(--font-sans, 'Atkinson Hyperlegible Next', sans-serif); font-size: 13px; color: var(--color-ink-2, #a3afbb); } .ds-status-mark { font-family: var(--font-data, 'B612 Mono', monospace); font-weight: 700; letter-spacing: 0.06em; color: var(--color-ink, #e8edf2); text-decoration: none; } .ds-status-station { margin: 0; display: flex; gap: 8px; align-items: center; } .ds-status-code { font-family: var(--font-data, 'B612 Mono', monospace); font-weight: 700; color: var(--color-track, #5ad1a8); } .ds-status-time { font-family: var(--font-data, 'B612 Mono', monospace); font-variant-numeric: tabular-nums; color: var(--color-ink, #e8edf2); } .ds-faint { color: var(--color-ink-3, #8592a0); } .ds-status-nav { display: flex; align-items: center; gap: 0; } .ds-status-nav a { display: grid; place-items: center; min-width: 44px; min-height: 44px; font-family: var(--font-data, 'B612 Mono', monospace); color: var(--color-ink-3, #8592a0); text-decoration: none; } .ds-status-nav a:hover { color: var(--color-ink, #e8edf2); } .ds-status-nav a[aria-current=page] { color: var(--color-amber, #f2c14e); } .ds-status-nav a.ds-status-cv { min-height: 36px; min-width: 0; margin-left: 12px; padding: 0 12px; background: var(--color-amber, #f2c14e); color: var(--color-amber-ink, #1d1708); font-family: var(--font-sans, 'Atkinson Hyperlegible Next', sans-serif); font-weight: 700; } .ds-status-nav a.ds-status-cv:hover { background: #f7d27a; } .ds-status a:focus-visible { outline: 2px solid var(--color-amber, #f2c14e); outline-offset: 3px; }"
+    },
+    {
+      "name": "Flight Strip",
+      "kind": "card",
+      "refersTo": "flight-strip-competition",
+      "description": "A record entry as a paper strip, coloured by kind, on a ruled rack.",
+      "html": "<div class=\"ds-rack\"><div class=\"ds-strip ds-strip-competition\"><div class=\"ds-strip-id\"><p class=\"ds-strip-callsign\">AICUP</p><p class=\"ds-strip-kind\"><svg viewBox=\"0 0 16 16\" width=\"16\" height=\"16\" aria-hidden=\"true\"><path d=\"M8 1.5 14.5 8 8 14.5 1.5 8Z\" fill=\"currentColor\"/></svg>Competition</p></div><div class=\"ds-strip-col\"><p class=\"ds-strong\">Team Geto-Dacians</p><p class=\"ds-soft\">AI Cup 2026</p></div><div class=\"ds-strip-col\"><p class=\"ds-soft\">Feb to Apr 2026</p></div><div class=\"ds-strip-col ds-strip-last\"><p class=\"ds-strong\">2nd of 89 teams</p><p class=\"ds-soft\">Bird species from radar tracks.</p><a href=\"#\">Code on GitHub</a></div></div></div>",
+      "css": ".ds-rack { padding: 24px; background-color: var(--color-rack, #14181d); background-image: repeating-linear-gradient(to bottom, transparent 0 11px, rgb(255 255 255 / 0.05) 11px 12px); } .ds-strip { display: grid; grid-template-columns: 8.5rem minmax(0,1fr) 9.5rem minmax(0,1.6fr); color: var(--color-strip-ink, #12161a); box-shadow: 0 6px 14px -8px rgb(0 0 0 / 0.7); font-family: var(--font-sans, 'Atkinson Hyperlegible Next', sans-serif); } .ds-strip-competition { background: var(--color-strip-competition, #f4cfbf); } .ds-strip p { margin: 0; } .ds-strip-id, .ds-strip-col { padding: 16px; border-right: 1px solid rgb(18 22 26 / 0.2); } .ds-strip-last { border-right: 0; display: grid; gap: 6px; } .ds-strip-callsign { font-family: var(--font-data, 'B612 Mono', monospace); font-size: 20px; font-weight: 700; line-height: 1; } .ds-strip-kind { margin-top: 8px !important; display: flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: var(--color-strip-ink-2, #3a434c); } .ds-strong { font-weight: 700; line-height: 1.375; } .ds-soft { font-size: 15px; color: var(--color-strip-ink-2, #3a434c); } .ds-strip a { font-size: 15px; font-weight: 600; color: inherit; text-decoration: underline; text-decoration-color: rgb(18 22 26 / 0.4); text-underline-offset: 0.2em; } .ds-strip a:hover { text-decoration-color: var(--color-strip-ink, #12161a); } .ds-strip a:focus-visible { outline: 2px solid var(--color-amber, #f2c14e); outline-offset: 3px; }"
+    },
+    {
+      "name": "Locked-Target Readout",
+      "kind": "card",
+      "refersTo": "readout-panel",
+      "description": "Console panel reporting the locked track: mono status, amber callsign, field list, result.",
+      "html": "<section class=\"ds-readout\"><header><h2>Selected track</h2><p class=\"ds-data\">Sweep · 7 tracks · Locked AICUP</p></header><div class=\"ds-readout-body\"><div class=\"ds-readout-top\"><p class=\"ds-readout-callsign\">AICUP</p><p class=\"ds-readout-kind\"><svg viewBox=\"0 0 16 16\" width=\"12\" height=\"12\" aria-hidden=\"true\"><path d=\"M8 1.5 14.5 8 8 14.5 1.5 8Z\" fill=\"currentColor\"/></svg>Competition</p></div><dl><dt>Role</dt><dd>Team Geto-Dacians</dd><dt>When</dt><dd>Feb to Apr 2026</dd></dl><p class=\"ds-readout-result\">2nd of 89 teams and 300 students.</p></div></section>",
+      "css": ".ds-readout { background: var(--color-panel, #222931); border: 1px solid var(--color-rule, #36404a); color: var(--color-ink, #e8edf2); font-family: var(--font-sans, 'Atkinson Hyperlegible Next', sans-serif); max-width: 28rem; } .ds-readout header { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 10px 16px; border-bottom: 1px solid var(--color-rule, #36404a); } .ds-readout h2 { margin: 0; font-size: 14px; font-weight: 600; color: var(--color-ink-2, #a3afbb); } .ds-data { margin: 0; font-family: var(--font-data, 'B612 Mono', monospace); font-size: 11px; letter-spacing: 0.02em; color: var(--color-ink-3, #8592a0); } .ds-readout-body { display: grid; gap: 12px; padding: 14px 16px; } .ds-readout-top { display: flex; align-items: baseline; justify-content: space-between; } .ds-readout-callsign { margin: 0; font-family: var(--font-data, 'B612 Mono', monospace); font-size: 24px; font-weight: 700; color: var(--color-amber, #f2c14e); } .ds-readout-kind { margin: 0; display: flex; align-items: center; gap: 6px; font-size: 14px; color: var(--color-ink-2, #a3afbb); } .ds-readout-kind svg { color: var(--color-track, #5ad1a8); } .ds-readout dl { margin: 0; display: grid; grid-template-columns: auto 1fr; gap: 4px 16px; font-size: 15px; } .ds-readout dt { color: var(--color-ink-3, #8592a0); } .ds-readout dd { margin: 0; } .ds-readout-result { margin: 0; font-weight: 600; line-height: 1.375; }"
+    },
+    {
+      "name": "Scope Blip with Data Tag",
+      "kind": "custom",
+      "refersTo": "data-tag",
+      "description": "A kind symbol on the scope with its callsign on a leader line; amber with a target box when locked.",
+      "html": "<div class=\"ds-scope\"><button class=\"ds-blip\" aria-pressed=\"false\"><svg viewBox=\"0 0 16 16\" width=\"14\" height=\"14\" aria-hidden=\"true\"><rect x=\"3\" y=\"3\" width=\"10\" height=\"10\" fill=\"currentColor\"/></svg><span class=\"ds-box\"></span><span class=\"ds-tag\"><span class=\"ds-leader\"></span><span><b>TNO</b><i>0226-0626</i></span></span></button></div>",
+      "css": ".ds-scope { position: relative; height: 120px; background: #161b20; } .ds-blip { position: absolute; left: 40px; top: 40px; display: flex; align-items: center; justify-content: center; min-width: 44px; min-height: 44px; background: none; border: 0; color: var(--color-track, #5ad1a8); cursor: pointer; } .ds-box { position: absolute; left: 50%; top: 50%; width: 28px; height: 28px; transform: translate(-50%,-50%) scale(1.5); border: 1.5px solid var(--color-amber, #f2c14e); opacity: 0; transition: opacity 300ms cubic-bezier(0.16,1,0.3,1), transform 300ms cubic-bezier(0.16,1,0.3,1); } .ds-tag { position: absolute; left: calc(100% - 0.6rem); top: 50%; transform: translateY(-50%); display: flex; align-items: center; gap: 6px; font-family: var(--font-data, 'B612 Mono', monospace); text-align: left; line-height: 1.25; white-space: nowrap; } .ds-leader { display: block; width: 20px; height: 1px; background: var(--color-ink-3, #8592a0); } .ds-tag b { display: block; font-size: 13px; color: var(--color-ink, #e8edf2); } .ds-tag i { display: block; font-style: normal; font-size: 11px; color: var(--color-ink-2, #a3afbb); } .ds-blip:hover, .ds-blip:focus-visible { color: var(--color-amber, #f2c14e); outline: none; } .ds-blip:hover .ds-box, .ds-blip:focus-visible .ds-box { opacity: 1; transform: translate(-50%,-50%) scale(1); } .ds-blip:hover .ds-leader, .ds-blip:focus-visible .ds-leader { background: var(--color-amber, #f2c14e); } .ds-blip:hover .ds-tag b, .ds-blip:focus-visible .ds-tag b { color: var(--color-amber, #f2c14e); }"
+    },
+    {
+      "name": "Kind Symbols",
+      "kind": "chip",
+      "refersTo": "flight-strip-role",
+      "description": "Square role, circle project, diamond competition, triangle education. Shape always travels with kind colour.",
+      "html": "<div class=\"ds-kinds\"><span><svg viewBox=\"0 0 16 16\" aria-hidden=\"true\"><rect x=\"3\" y=\"3\" width=\"10\" height=\"10\" fill=\"currentColor\"/></svg>Role</span><span><svg viewBox=\"0 0 16 16\" aria-hidden=\"true\"><circle cx=\"8\" cy=\"8\" r=\"5.5\" fill=\"currentColor\"/></svg>Project</span><span><svg viewBox=\"0 0 16 16\" aria-hidden=\"true\"><path d=\"M8 1.5 14.5 8 8 14.5 1.5 8Z\" fill=\"currentColor\"/></svg>Competition</span><span><svg viewBox=\"0 0 16 16\" aria-hidden=\"true\"><path d=\"M8 2 14.5 13.5h-13Z\" fill=\"currentColor\"/></svg>Education</span></div>",
+      "css": ".ds-kinds { display: flex; flex-wrap: wrap; gap: 16px; font-family: var(--font-sans, 'Atkinson Hyperlegible Next', sans-serif); font-size: 14px; color: var(--color-ink-2, #a3afbb); } .ds-kinds span { display: inline-flex; align-items: center; gap: 6px; } .ds-kinds svg { width: 12px; height: 12px; color: var(--color-track, #5ad1a8); }"
+    },
+    {
+      "name": "Contact Channel List",
+      "kind": "nav",
+      "refersTo": "readout-panel",
+      "description": "Console panel rows: green mono channel label, large value, arrow that turns amber on hover.",
+      "html": "<ul class=\"ds-contact\"><li><a href=\"#\"><span class=\"ds-contact-label\">EMAIL</span><span class=\"ds-contact-value\">denizceviker12@gmail.com</span><svg viewBox=\"0 0 24 24\" width=\"20\" height=\"20\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" aria-hidden=\"true\"><path d=\"M7 7h10v10\"/><path d=\"M7 17 17 7\"/></svg></a></li><li><a href=\"#\"><span class=\"ds-contact-label\">GITHUB</span><span class=\"ds-contact-value\">sinan2000</span><svg viewBox=\"0 0 24 24\" width=\"20\" height=\"20\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" aria-hidden=\"true\"><path d=\"M7 7h10v10\"/><path d=\"M7 17 17 7\"/></svg></a></li></ul>",
+      "css": ".ds-contact { list-style: none; margin: 0; padding: 0; background: var(--color-panel, #222931); border: 1px solid var(--color-rule, #36404a); font-family: var(--font-sans, 'Atkinson Hyperlegible Next', sans-serif); } .ds-contact li + li { border-top: 1px solid var(--color-rule, #36404a); } .ds-contact a { display: grid; grid-template-columns: 6.5rem minmax(0,1fr) auto; align-items: center; gap: 16px; min-height: 64px; padding: 16px 24px; color: var(--color-ink, #e8edf2); text-decoration: none; } .ds-contact-label { font-family: var(--font-data, 'B612 Mono', monospace); font-size: 12px; font-weight: 700; color: var(--color-track, #5ad1a8); } .ds-contact-value { font-size: 22px; font-weight: 600; } .ds-contact svg { color: var(--color-ink-3, #8592a0); transition: transform 300ms, color 300ms; } .ds-contact a:hover .ds-contact-value, .ds-contact a:hover svg { color: var(--color-amber, #f2c14e); } .ds-contact a:hover svg { transform: translate(2px,-2px); } .ds-contact a:focus-visible { outline: 2px solid var(--color-amber, #f2c14e); outline-offset: -2px; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Controller's Position",
+    "overview": "The site is an air-traffic-control workstation. A slate radar scope is the hero instrument: crisp, unglowing range rings that mark years, a rotating sweep, and blips for every role, project, competition and degree, each carrying a monospaced data tag on a leader line. Below the scope, the record sits in a strip rack: paper flight strips, banded by kind, laid on a dark rail. Everything reads like equipment someone works at, never like a brochure.\n\nThe palette is dark and instrumental. Slate glass and its panels carry the world, track green marks live data, and amber is reserved for the one thing the controller has locked and the one action the visitor should take (the CV). The only light surfaces are the paper strips, so they read as physical objects set into the console. Density is high in the instruments and generous between sections: the hero fills the first viewport, then each section opens with wide vertical air.\n\nType splits words from data. Atkinson Hyperlegible Next sets every sentence, heading and name. B612 Mono, the cockpit display face, sets only ASCII data: callsigns, bearings, times, periods, counts. Shape carries meaning alongside colour: square for roles, circle for projects, diamond for competitions, triangle for education, everywhere a kind appears.",
+    "keyCharacteristics": [
+      "Slate glass ground (#1b2026) with flat tonal panels; square corners everywhere except the round scope.",
+      "Track green for live tracks and data codes; amber only for lock, focus, selection and the primary action.",
+      "Paper flight strips in four kind colours on a ruled rack, the only light surfaces.",
+      "B612 Mono for ASCII data, Atkinson Hyperlegible Next for words.",
+      "Kind symbols (square, circle, diamond, triangle) pair with every kind colour.",
+      "Reduced motion stops the sweep and lights every track."
+    ],
+    "rules": [
+      { "name": "The Lock Rule", "body": "Amber means locked or wanted: the locked target, focus, selection, and the CV. Never decorate with it.", "section": "colors" },
+      { "name": "The Paper Rule", "body": "Light surfaces exist only as flight strips, and a strip's colour is decided by its kind, never by taste.", "section": "colors" },
+      { "name": "The Shape-With-Colour Rule", "body": "A kind colour never appears without its kind symbol; colour is never the only signal.", "section": "colors" },
+      { "name": "The ASCII Data Rule", "body": "B612 Mono sets only ASCII data: callsigns, bearings, times, periods, codes, counts, language codes. Its subset has no Romanian ș, ț, ă, â, î, so any localised word goes in Atkinson. If a string can be translated, it is not data.", "section": "typography" },
+      { "name": "The Words Are Hyperlegible Rule", "body": "Headings, names, ledes and every sentence are Atkinson Hyperlegible Next; headings balance, paragraphs wrap pretty.", "section": "typography" },
+      { "name": "The Unglowing Glass Rule", "body": "Rings, ticks and crosshairs are crisp hairlines in ring and rule colours. No bloom, no phosphor glow, no blur on the scope.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do keep amber for the locked target, focus, selection and the CV download, with Amber Ink (#1d1708) on it.",
+      "Do colour a strip by its kind and pair every kind colour with its symbol: square role, circle project, diamond competition, triangle education.",
+      "Do set callsigns, bearings, times, periods and codes in B612 Mono with tabular numerals; set every translatable word in Atkinson Hyperlegible Next.",
+      "Do separate surfaces with 1px Rule borders and tonal steps; reserve the Rack Drop shadow for objects on a rack.",
+      "Do keep every target at least 44px and give every animated instrument a held, fully-lit reduced-motion state.",
+      "Do draw illustrations for work without screenshots in the scope's own vector language: Deep Glass ground, dashed Ring arcs, Track Green lines, mono labels."
+    ],
+    "donts": [
+      "Don't put Romanian or any localised string in B612 Mono; its subset drops ș, ț, ă, â, î.",
+      "Don't add glow, bloom or blur to the scope or its rings.",
+      "Don't round panels, buttons or strips; the scope is the only round form.",
+      "Don't introduce light surfaces other than the four strip papers.",
+      "Don't use amber as decoration, a section accent or a second highlight colour."
+    ]
+  }
+}
