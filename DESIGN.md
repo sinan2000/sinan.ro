@@ -63,6 +63,20 @@ typography:
     lineHeight: 1.25
     letterSpacing: "0.02em"
     fontFeature: "tnum"
+  data-tag:
+    fontFamily: "B612 Mono, ui-monospace, monospace"
+    fontSize: "11px"
+    fontWeight: 400
+    lineHeight: 1.25
+    letterSpacing: "0.02em"
+    fontFeature: "tnum"
+  data-tag-sm:
+    fontFamily: "B612 Mono, ui-monospace, monospace"
+    fontSize: "10px"
+    fontWeight: 400
+    lineHeight: 1.25
+    letterSpacing: "0.02em"
+    fontFeature: "tnum"
   data-callsign:
     fontFamily: "B612 Mono, ui-monospace, monospace"
     fontSize: "1.5rem"
