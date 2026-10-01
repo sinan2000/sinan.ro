@@ -40,6 +40,26 @@ export type Track = {
 
 export const tracks: Track[] = [
   {
+    callsign: 'CAL',
+    kind: 'project',
+    start: 2026.75,
+    active: true,
+    bearing: 160,
+    tag: 'BETA',
+    role: { en: 'Built it, solo', ro: 'Construită de mine, singur' },
+    org: { en: 'Calories, own app', ro: 'Calories, aplicație proprie' },
+    period: { en: 'Oct 2026, public beta', ro: 'oct. 2026, beta public' },
+    result: {
+      en: 'An offline-first calorie and macro tracker with barcode scanning, an offline food database and a target that adapts to your weight. Everything stays on the phone.',
+      ro: 'O aplicație de calorii și macronutrienți care funcționează offline, cu scanare de coduri de bare, bază de alimente offline și o țintă care se adaptează după greutate. Totul rămâne pe telefon.',
+    },
+    details: {
+      en: 'Expo and React Native with SQLite and Drizzle on the device, the ANSES-CIQUAL food table bundled, Open Food Facts for barcodes, Apple Health and Health Connect sync.',
+      ro: 'Expo și React Native cu SQLite și Drizzle pe dispozitiv, tabelul de alimente ANSES-CIQUAL inclus, Open Food Facts pentru coduri de bare, sincronizare cu Apple Health și Health Connect.',
+    },
+    links: [{ label: { en: 'Case study', ro: 'Studiu de caz' }, href: 'https://snsautomation.tech/work/calories' }],
+  },
+  {
     callsign: 'COUP',
     kind: 'project',
     start: 2026.3,
@@ -248,7 +268,7 @@ export const capabilities: { code: string; area: L; tools: string }[] = [
   { code: 'ML', area: { en: 'Machine learning', ro: 'Machine learning' }, tools: 'Python, pandas, scikit-learn, LightGBM, XGBoost, CatBoost, TabPFN, PyTorch, Ultralytics YOLO, OpenCV, SHAP, Optuna' },
   { code: 'BE', area: { en: 'Backends and data', ro: 'Backend și date' }, tools: 'Python, Pydantic, httpx, TypeScript, Node.js, Hono, PostgreSQL, Supabase, Drizzle, REST and OpenAPI, Docker, CI' },
   { code: 'WEB', area: { en: 'Web', ro: 'Web' }, tools: 'Next.js, React, Payload CMS, Sanity, Tailwind CSS, Playwright, Vitest' },
-  { code: 'MOB', area: { en: 'Mobile and desktop', ro: 'Mobil și desktop' }, tools: 'Expo, React Native, Tauri' },
+  { code: 'MOB', area: { en: 'Mobile and desktop', ro: 'Mobil și desktop' }, tools: 'Expo, React Native, SQLite, Drizzle, Tauri' },
   { code: 'EMB', area: { en: 'Embedded and automotive', ro: 'Embedded și auto' }, tools: 'Bluetooth LE and Classic, PLC protocols, QNX, CMake, Jenkins, Vector CANoe, DaVinci Developer' },
 ];
 
